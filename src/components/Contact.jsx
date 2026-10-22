@@ -21,7 +21,7 @@ const contacts = [
   },
   {
     label: 'Facebook',
-    value: 'facebook.com/pihjean',
+    value: 'Jean Potes',
     href: 'https://www.facebook.com/pihjean',
     external: true,
   },
