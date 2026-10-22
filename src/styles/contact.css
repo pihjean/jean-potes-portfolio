@@ -1,0 +1,96 @@
+.contact-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ===== LEFT ===== */
+.contact-title {
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.contact-title span {
+  color: var(--pink);
+}
+
+.contact-intro {
+  max-width: 420px;
+  color: var(--text-muted);
+}
+
+/* ===== RIGHT: list ===== */
+.contact-list {
+  border-top: 1px solid var(--border);
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 24px;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+.contact-value {
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+  transition: 0.25s ease;
+}
+
+.contact-arrow {
+  text-align: right;
+  color: var(--text-muted);
+  transition: 0.25s ease;
+}
+
+.contact-link:hover .contact-value {
+  color: var(--pink);
+}
+
+.contact-link:hover .contact-arrow {
+  color: var(--pink);
+  transform: translate(2px, -2px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ===== TABLET / PHONE ===== */
+@media (max-width: 900px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-row {
+    grid-template-columns: 1fr 24px;
+    gap: 4px 12px;
+    padding: 18px 0;
+  }
+
+  .contact-label {
+    grid-column: 1 / -1;
+  }
+}

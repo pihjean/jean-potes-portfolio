@@ -1,0 +1,76 @@
+/* ===== STACKED LAYOUT ===== */
+.skills-stack {
+  display: grid;
+  gap: 56px;
+  border-top: 1px solid var(--border);
+  padding-top: 36px;
+}
+
+.skills-heading {
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+
+/* ===== PILLS ===== */
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-pill {
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--pink-glow);
+  border: 1px solid rgba(232, 38, 142, 0.3);
+}
+
+.skill-pill-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+/* ===== TOOL ROWS ===== */
+.tool-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 16px 0;
+  border-bottom: 1px dotted var(--border);
+}
+
+.tool-row:first-child {
+  padding-top: 0;
+}
+
+.tool-row:last-child {
+  border-bottom: none;
+}
+
+.tool-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+/* ===== PHONE ===== */
+@media (max-width: 700px) {
+  .skills-stack {
+    gap: 40px;
+  }
+
+  .tool-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .tool-label {
+    padding-top: 0;
+  }
+}

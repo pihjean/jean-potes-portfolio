@@ -1,0 +1,158 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 18px 0;
+  transition: 0.3s ease;
+}
+
+.navbar-scrolled {
+  background: rgba(5, 3, 7, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  z-index: 102;
+}
+
+.logo-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: var(--pink);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+/* ===== LINKS (DESKTOP) ===== */
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links ul a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: 0.25s ease;
+}
+
+.nav-links ul a:hover {
+  color: var(--pink);
+  border-bottom-color: var(--pink);
+}
+
+.nav-cta {
+  padding: 10px 22px;
+  font-size: 0.85rem;
+}
+
+.nav-cta-mobile {
+  display: none;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  z-index: 102;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.hamburger-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== TABLET / PHONE ===== */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-cta-desktop {
+    display: none;
+  }
+
+  .nav-cta-mobile {
+    display: inline-flex;
+    margin-top: 28px;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(5, 3, 7, 0.97);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: 0.3s ease;
+    z-index: 101;
+  }
+
+  .nav-links.nav-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 26px;
+    text-align: center;
+  }
+
+  .nav-links ul a {
+    font-size: 1.1rem;
+  }
+}

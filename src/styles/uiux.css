@@ -1,0 +1,204 @@
+.uiux-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.uiux-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+.uiux-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--pink);
+  box-shadow: 0 14px 40px var(--pink-glow);
+}
+
+/* ===== PREVIEW PICTURE (UI/UX) ===== */
+.uiux-thumb {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #3a0f30, #12071a);
+  border: 1px solid var(--border);
+}
+
+/* contain: kita ang buong picture, walang putol at hindi stretch */
+.uiux-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.uiux-card:hover .uiux-thumb img {
+  transform: scale(1.03);
+}
+
+/* ===== BODY ===== */
+.uiux-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 14px 6px 6px;
+}
+
+.uiux-category {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 6px;
+}
+
+.uiux-title {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+/* ===== FOOTER: Figma tag (kaliwa) + arrow (kanan) ===== */
+.uiux-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.uiux-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--pink-glow);
+  border: 1px solid rgba(232, 38, 142, 0.3);
+}
+
+.uiux-arrow {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: #12071a;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.uiux-arrow:hover {
+  background: var(--pink);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* ===== GRAPHIC DESIGN (static ads) ===== */
+.graphic {
+  margin-top: 90px;
+}
+
+.graphic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.graphic-card {
+  margin: 0;
+  padding: 12px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.graphic-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--pink);
+  box-shadow: 0 14px 40px var(--pink-glow);
+}
+
+/* Sumusunod ang kahon sa hugis ng picture mismo, kaya walang putol
+   at walang sobrang espasyo. Square (1 / 1) ang default; kung ibang
+   size ang ads mo, palitan ang ratio (hal. 4 / 5 o 9 / 16). */
+.graphic-thumb {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #3a0f30, #12071a);
+  border: 1px solid var(--border);
+}
+
+.graphic-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.graphic-card:hover .graphic-thumb img {
+  transform: scale(1.03);
+}
+
+.graphic-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 6px 4px;
+}
+
+.graphic-concept {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.graphic-tool {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--pink-glow);
+  border: 1px solid rgba(232, 38, 142, 0.3);
+}
+
+/* ===== LAPTOP / TABLET ===== */
+@media (max-width: 1100px) {
+  .uiux-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ===== PHONE ===== */
+@media (max-width: 760px) {
+  .graphic {
+    margin-top: 64px;
+  }
+
+  .graphic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .uiux-grid {
+    grid-template-columns: 1fr;
+  }
+}

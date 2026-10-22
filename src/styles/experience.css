@@ -1,0 +1,105 @@
+.exp-list {
+  border-top: 1px solid var(--border);
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ===== LEFT: date + category ===== */
+.exp-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.exp-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+/* ===== RIGHT: details ===== */
+.exp-title {
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.exp-company {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.exp-location {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.exp-points {
+  display: grid;
+  gap: 10px;
+}
+
+.exp-points li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.exp-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  background: var(--pink);
+}
+
+/* ===== FREELANCE PROJECTS ===== */
+.exp-project + .exp-project {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px dotted var(--border);
+}
+
+.exp-project-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+  margin-bottom: 12px;
+}
+
+.exp-project-head h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.exp-project-head span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--pink);
+}
+
+/* ===== TABLET / PHONE ===== */
+@media (max-width: 800px) {
+  .exp-item {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 28px 0;
+  }
+}

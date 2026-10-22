@@ -1,0 +1,129 @@
+/* ===== TOGGLE BUTTON (kanang-ibaba) ===== */
+.theme-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1.5px solid var(--pink);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 16px var(--pink-glow);
+  transition: 0.25s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--pink);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.theme-toggle svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ===================================================== */
+/* ===== LIGHT MODE OVERRIDES (black text + pink) ===== */
+/* ===================================================== */
+
+/* ----- Navbar ----- */
+:root[data-theme='light'] .navbar.navbar-scrolled {
+  background: rgba(255, 247, 251, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+:root[data-theme='light'] .navbar .logo-text,
+:root[data-theme='light'] .navbar .nav-links a:not(.btn) {
+  color: var(--text);
+}
+
+:root[data-theme='light'] .navbar .nav-links a:not(.btn):hover {
+  color: var(--pink);
+}
+
+:root[data-theme='light'] .navbar .hamburger span {
+  background: var(--text);
+}
+
+@media (max-width: 900px) {
+  :root[data-theme='light'] .navbar .nav-links.nav-open {
+    background: #fff7fb;
+  }
+}
+
+/* ----- Hero ----- */
+:root[data-theme='light'] .hero-orb {
+  background: radial-gradient(circle at 30% 30%, #ff9fcf, #e8268e 85%);
+  box-shadow: 0 0 30px rgba(232, 38, 142, 0.3);
+}
+
+/* ----- Image placeholders (kapag wala pang picture) ----- */
+:root[data-theme='light'] .project-thumb,
+:root[data-theme='light'] .uiux-thumb,
+:root[data-theme='light'] .graphic-thumb {
+  background: linear-gradient(135deg, #ffd6ea, #fff0f7);
+}
+
+/* ----- Round arrow buttons: itim na bilog, puting arrow ----- */
+:root[data-theme='light'] .project-arrow,
+:root[data-theme='light'] .uiux-arrow {
+  background: #1a0a14;
+  color: #fff;
+}
+
+:root[data-theme='light'] .project-arrow:hover,
+:root[data-theme='light'] .uiux-arrow:hover {
+  background: var(--pink);
+  color: #fff;
+}
+
+/* ----- Carousel dots ----- */
+:root[data-theme='light'] .dot {
+  background: rgba(26, 10, 20, 0.2);
+}
+
+:root[data-theme='light'] .dot:hover {
+  background: rgba(26, 10, 20, 0.4);
+}
+
+:root[data-theme='light'] .dot.dot-active {
+  background: var(--pink);
+}
+
+/* ----- Cards: light shadow para hindi flat ----- */
+:root[data-theme='light'] .card {
+  box-shadow: 0 4px 18px rgba(232, 38, 142, 0.08);
+}
+
+/* ----- Pills ----- */
+:root[data-theme='light'] .skill-pill-outline {
+  border-color: rgba(26, 10, 20, 0.25);
+}
+
+:root[data-theme='light'] .project-tags .tag-hardware {
+  border-color: rgba(26, 10, 20, 0.25);
+}
+
+/* ----- Phone: iwas takip sa content ----- */
+@media (max-width: 560px) {
+  .theme-toggle {
+    right: 14px;
+    bottom: 14px;
+    width: 44px;
+    height: 44px;
+  }
+}
+:root[data-theme='light'] .thumb-dot {
+  background: rgba(26, 10, 20, 0.2);
+}
+
+:root[data-theme='light'] .thumb-dot-active {
+  background: var(--pink);
+}

@@ -1,0 +1,85 @@
+/* ===== TEXT (full width) ===== */
+.about-text {
+  width: 100%;
+}
+
+.about-text .section-title {
+  margin-bottom: 20px;
+}
+
+.about-desc {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+/* ===== EDUCATION ===== */
+.about-education {
+  margin-top: 56px;
+}
+
+.about-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-bottom: 14px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.edu-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.edu-degree {
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.edu-school {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.edu-date {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.awards-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.award-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.award-pill {
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--pink-glow);
+  border: 1px solid rgba(232, 38, 142, 0.35);
+}
+
+/* ===== TABLET / PHONE ===== */
+@media (max-width: 900px) {
+  .edu-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
