@@ -7,7 +7,7 @@ const certs = [
     year: '2022',
   },
   {
-    title: 'Philippines Civil Service Professional Eligibility',
+    title: 'Career Service Professional Eligibility',
     issuer: 'Civil Service Commission',
     year: '2026',
   },
@@ -40,7 +40,7 @@ function Certifications() {
               </div>
 
               <div className="cert-body">
-                <span className="cert-category">Certification</span>
+                
                 <h3 className="cert-title">{c.title}</h3>
 
                 <div className="cert-meta">
