@@ -22,26 +22,34 @@
   gap: 24px;
 }
 
-/* ===== LOGO ===== */
+/* ===== LOGO (text lang, walang box) ===== */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
   z-index: 102;
 }
 
 .logo-mark {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  background: var(--pink);
-  color: #fff;
-  border-radius: 8px;
+  font-size: 1.6rem;
   font-weight: 800;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: var(--text); /* puti sa dark mode */
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.logo:hover .logo-mark {
+  color: var(--pink);
+  transform: translateY(-1px);
+}
+
+/* Pink sa light mode */
+:root[data-theme='light'] .logo-mark {
+  color: var(--pink);
+}
+
+:root[data-theme='light'] .logo:hover .logo-mark {
+  color: var(--pink-dark);
 }
 
 /* ===== LINKS (DESKTOP) ===== */

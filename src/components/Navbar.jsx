@@ -7,6 +7,7 @@ const links = [
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'UI/UX', href: '#uiux' },
+  { label: 'Certificates', href: '#certifications' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -35,9 +36,8 @@ function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-inner">
-        <a href="#home" className="logo" onClick={close}>
+        <a href="#home" className="logo" onClick={close} aria-label="Go to top">
           <span className="logo-mark">PJ</span>
-    
         </a>
 
         <nav className={`nav-links ${open ? 'nav-open' : ''}`}>
